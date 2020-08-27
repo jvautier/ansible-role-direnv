@@ -1,0 +1,14 @@
+---
+- name: Download https://github.com/direnv/direnv/releases/download/v{{ direnv_version }}/direnv.{{ ansible_system | lower }}-amd64
+  get_url:
+      url: https://github.com/direnv/direnv/releases/download/v{{ direnv_version }}/direnv.{{ ansible_system | lower }}-amd64
+      dest: /usr/bin
+      mode: 0777
+      # remote_src: true
+
+- name: Move direnv to /usr/bin
+  file:
+      src: /usr/bin/direnv.{{ ansible_system | lower }}-amd64
+      path: /usr/bin/direnv
+      state: hard
+      force: true
