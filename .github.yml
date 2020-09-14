@@ -1,0 +1,8 @@
+---
+fullname: jvautier/ansible-role-direnv
+description: Install direnv through ansible
+tags:
+  - ansible
+  - ansible-role
+  - direnv
+github: {}
